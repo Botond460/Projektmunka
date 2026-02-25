@@ -1,54 +1,107 @@
+/* Alap beállítások */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f9f4;
-  color: #333;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f9f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
+/* Fejléc */
 header {
-  background-color: #006d5b;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
+    background-color: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+/* Navigáció */
+nav {
+    background-color: #3cb371;
+    text-align: center;
+    padding: 0.7rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1.2rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #e0ffe8;
+}
+
+/* Tartalom */
 main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 2rem;
-  gap: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-.place {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  max-width: 300px;
-  text-align: center;
-  overflow: hidden;
+/* Park szekciók */
+section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.place img {
-  width: 10%;
-  height: 20px;
-  object-fit: cover;
+section:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.place h2 {
-  margin: 0.5rem 0;
-  color: #006d5b;
+section img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.place p {
-  padding: 0 1rem 1rem;
+section div {
+    padding: 1rem 1.5rem;
 }
 
+section h2 {
+    color: #2e8b57;
+    margin-top: 0;
+}
+
+/* Lábléc */
 footer {
-  background-color: #004c41;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+    background-color: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Mobilbarát nézet */
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 0.4rem;
+    }
+
+    section div {
+        padding: 1rem;
+    }
 }
